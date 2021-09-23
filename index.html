@@ -1,0 +1,59 @@
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" 
+integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous">
+</script>
+
+<link rel="stylesheet" href="patuti.css"></link>
+
+<body id="game">
+    <audio id="bgMusic">
+        <source src="audio/Magical_Full.ogg" type="audio/ogg">
+    </audio>
+    <audio id="bulletSound">
+        <source src="audio/shoot-cut.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="gameOverSound">
+        <source src="audio/you_died.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="squish">
+        <source src="audio/Squish 1-SoundBible.com-662226724.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="jump">
+        <source src="audio/jump.mp3" type="audio/mpeg">
+    </audio>
+    <div id="gameScreen">
+        <div id="welcomeScreen"> 
+            <p id="gameTitle">Patuti Bullet Hell</p>
+            <p>Left Arrow Key - Move Left</p>
+            <p>Up Arrow Key - Jump</p>
+            <p>Right Arrow Key - Move Right</p>
+            <p>Down Arrow Key - Dock</p>
+        </div>
+        <div id="gameOverScreen" hidden>
+            <p id="youDied">You died</p>
+            <p id="prevDodged" class="stats"></p>
+            <p id="currDodged" class="stats"></p>
+            <p id="tryAgain">Click anywhere to try again</p>
+        </div>
+        <img id="bgImage" src="moves/background.png">
+        <img id="platform" src="moves/area.png">
+        <img id="char1" src="moves/idle-1.png">
+        <div id="lifeBar" hidden> 
+            <div id="totalLife" class="totalLife">
+                <div id="currLife" class="currLife"></div>
+            </div>
+        </div>
+        <div id="startButton"> 
+            <img src="moves/bullet_h.png" class="buttonImage">
+            <p class="startButtonText">Start Game</p>
+        </div>
+        <div id="scoreDiv" hidden>
+            <p id="bulletsDodged"> Bullets Dodged: 0</p></p>
+        </div>
+    </div>
+</body>
+
+<script src="patuti.js"></script>
+
+
+
+

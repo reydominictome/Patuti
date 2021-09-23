@@ -1,0 +1,130 @@
+#gameScreen{text-align: center;}
+
+#welcomeScreen{
+    position: absolute;
+    height: 500px;
+    width: 960px;
+    left: 170px; top:20px;
+}
+
+#gameTitle{
+    font-family: papyrus; 
+    font-size: 28px; 
+    color: red; 
+    font-weight: bold;
+}
+
+#gameOverScreen{
+    left: 130px; 
+    position: absolute; 
+    height: 635px; 
+    width: 1036px; 
+    background-color:black;
+}
+
+#youDied{
+    font-family: papyrus; 
+    font-size: 100px; 
+    color: red; 
+    font-weight: bold;
+}
+
+#tryAgain{
+    font-family: papyrus; 
+    font-size: 60px; 
+    color: red; 
+    font-weight: bold;
+}
+
+#bgImage{
+    height: 630px; 
+    width: 1028px;
+}
+
+#platform{
+    position: absolute; 
+    left:450px; 
+    top: 350px; 
+    width:400px;
+}
+
+#char1 {
+    position: absolute; 
+    left: 600px; 
+    top: 260px; 
+    height: 100px;
+}
+
+#lifeBar{
+    position: absolute; 
+    height: 30px; 
+    width: 250px; 
+    left: 900px; 
+    top:590px; 
+    border: solid;
+}
+
+#startButton{
+    position: absolute; 
+    height: 50px; 
+    width: 170px; 
+    left: 570px; 
+    top:400px;
+}
+
+#scoreDiv{
+    position: absolute; 
+    height: 50px; 
+    width: 170px; 
+    left: 130px; 
+    top:10px;
+}
+
+.buttonImage{
+    height: 100%; 
+    width: 100%;
+}
+
+.startButtonText{
+    color: red;
+    position: absolute; 
+    left: 60px; 
+    top: 3px; 
+    font-weight: bold;
+}
+
+.totalLife{
+    height: 100%; 
+    width: 100%; 
+    background-color: #ddd
+}
+
+.currLife{
+    height: 100%; 
+    width: 100%;
+    background-color: green; 
+}
+
+.stats{
+    font-family: papyrus; 
+    font-size: 28px; 
+    color: white; 
+    font-weight: bold;
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
