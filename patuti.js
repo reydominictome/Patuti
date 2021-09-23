@@ -17,6 +17,7 @@ var moves = [["moves/idle-1.png","moves/idle-2.png"],
     "moves/dock-4.png", "moves/dock-4.png", "moves/dock-5.png"]];
 const bulletArray = [];
 var audioBg = document.getElementById("bgMusic");
+audioBg.loop = true;
 var audioShoot = document.getElementById("bulletSound");
 var audioGameOver = document.getElementById("gameOverSound");
 var audioSquish = document.getElementById("squish");
@@ -24,7 +25,7 @@ var audioJump = document.getElementById("jump");
 
 function startGame(){
     audioBg.play();
-    setInterval("spawnBullets()",2000);
+    setInterval("spawnBullets()",1000);
     $("#lifeBar").show();
     $("#scoreDiv").show();
     $("#welcomeScreen").hide();
@@ -128,9 +129,10 @@ function actIt(){
     }
 
     for(i = 0; i < bulletArray.length; i++){
+        var speed = Math.floor(Math.random() * (30 - 20 + 1)) + 20;
         if(bulletArray[i].axis == 1){
             bulletArray[i].bullet.appendTo($('#gameScreen'));
-            bulletArray[i].bullet.css("top", (bulletArray[i].bullet.position().top + 20) + "px");
+            bulletArray[i].bullet.css("top", (bulletArray[i].bullet.position().top + speed) + "px");
             if(bulletArray[i].bullet.offset().top > $("#bgImage").height() - 10){
                 bulletArray[i].bullet.remove();
                 bulletArray.splice(i, 1);
@@ -139,7 +141,7 @@ function actIt(){
         }
         else{
             bulletArray[i].bullet.appendTo($('#gameScreen'));
-            bulletArray[i].bullet.css("left", (bulletArray[i].bullet.position().left - 20) + "px");
+            bulletArray[i].bullet.css("left", (bulletArray[i].bullet.position().left - speed) + "px");
             if(bulletArray[i].bullet.offset().left < $("#bgImage").offset().left){
                 bulletArray[i].bullet.remove();
                 bulletArray.splice(i, 1);
