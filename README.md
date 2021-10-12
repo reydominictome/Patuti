@@ -1,3 +1,3 @@
 # Patuti
-Patuti JS game for school assignment/project. 
-Uses vanilla JS
+A small game where players use directional keys to dodge bullets.
+Uses Jquery.
